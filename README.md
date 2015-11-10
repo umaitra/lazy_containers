@@ -3,25 +3,13 @@ Lazily evaluated dicts and lists for python.
 
 Examples of lazy lists:
 
-def get_peano():
-    """Lazy numbers starting from 0."""
+    # Whole numbers:
     a = LazyList([0])
     a[1:] = a + 1
-    return a
 
-
-def get_fact():
-    """Lazy factorials."""
-    a = LazyList([1])
-    a[1:] = a * get_peano()[1:]
-    return a
-
-
-def get_fib():
-    """Lazy fibonacci sequence."""
+    # Fibonacci:
     a = LazyList([0, 1])
     a[2:] = a[1:] + a
-    return a
 
 
 
